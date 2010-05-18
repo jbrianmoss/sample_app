@@ -1,0 +1,10 @@
+#!/bin/ruby
+require 'redgreen'
+require 'autotest/timestamp'
+
+module Autotest::GnomeNotify
+  def self.notify title, msg, img
+    system "notify-send '#{title}' '#{msg}' -t 3000"
+  end 
+end
+
