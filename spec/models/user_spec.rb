@@ -4,7 +4,9 @@ describe User do
   before(:each) do
     @valid_attributes = {
       :name => "Example User",
-      :email => "user@example.com"
+      :email => "user@example.com",
+      :password => "foobar",
+      :password_confirmation => "foobar"
     }
   end
 
@@ -57,5 +59,48 @@ describe User do
     user_with_duplicate_email = User.new(@valid_attributes)
     user_with_duplicate_email.should_not be_valid
   end
+
+  describe "password validations" do
+
+    it "should require a password" do
+      User.new(@valid_attributes.merge(:password => "", :password_confirmation => "")).
+        should_not be_valid
+    end
+
+    it "should require a matching password confirmation" do
+      User.new(@valid_attributes.merge(:password_confirmation => "invalid")).
+        should_not be_valid
+    end
+
+    it "should reject short passwords" do
+      short = "a" * 5
+      hash = @valid_attributes.merge(:password => short, :password_confirmation => short)
+      User.new(hash).should_not be_valid
+    end
+
+    it "should reject long passwords" do
+      long = "a" * 41
+      hash = @valid_attributes.merge(:password => long, :password_confirmation => long)
+      User.new(hash).should_not be_valid
+    end
+  end
+
+  describe "password encryption" do
+
+    before(:each) do
+      @user = User.create!(@valid_attributes)
+    end
+
+    it "should have an encrypted password attribute" do
+      @user.should respond_to(:encrypted_password)
+    end
+
+    it "should set the encrypted password" do
+      @user.encrypted_password.should_not be_blank
+    end
+
+  end
+
+
 
 end
