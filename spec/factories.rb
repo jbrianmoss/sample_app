@@ -9,3 +9,8 @@ end
 Factory.sequence :email do |n|
   "person-#{n}@example.com"
 end
+
+Factory.define :event do |event|
+  event.name "Foo bar"
+  event.association :user
+end

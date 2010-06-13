@@ -83,6 +83,14 @@ describe UsersController do
       response.should have_tag("h2>img", :class => "gravatar")
     end
 
+    it "should show the user's events" do
+      e1 = Factory(:event, :user => @user, :name => "Foo bar")
+      e2 = Factory(:event, :user => @user, :name => "Baz quux")
+      get :show, :id => @user
+      response.should have_tag("span.name", e1.name)
+      response.should have_tag("span.name", e2.name)
+    end
+
   end
 
   describe "GET 'new'" do
