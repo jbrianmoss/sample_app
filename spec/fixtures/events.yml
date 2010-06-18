@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  start_time: 2010-06-17 19:12:56
+  end_time: 2010-06-17 19:12:56
+  stop_sales: 2010-06-17 19:12:56
+  quantity: 1
+  price: 9.99
+  currency: MyString
+  max_tix: 1
+
+two:
+  name: MyString
+  description: MyString
+  start_time: 2010-06-17 19:12:56
+  end_time: 2010-06-17 19:12:56
+  stop_sales: 2010-06-17 19:12:56
+  quantity: 1
+  price: 9.99
+  currency: MyString
+  max_tix: 1

@@ -153,4 +153,32 @@ describe User do
     end
   end
 
+
+
+  describe "event associations" do
+
+    before(:each) do
+      @user = User.create(@attr)
+      @e1 = Factory(:event, :user => @user, :start_time => Time.now + 1.year)
+      @e2 = Factory(:event, :user => @user, :start_time => Time.now + 30.days)
+    end
+
+    it "should have a events attribute" do
+      @user.should respond_to(:events)
+    end
+
+    it "should have the right microposts in the right order" do
+      @user.events.should == [@e2, @e1]
+    end
+
+    it "should destroy associated events" do
+      @user.destroy
+      [@e1, @e2].each do |event|
+        Event.find_by_id(event.id).should be_nil
+      end
+    end
+
+  end
+
+
 end

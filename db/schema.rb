@@ -9,7 +9,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100613175602) do
+ActiveRecord::Schema.define(:version => 20100617231256) do
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "stop_sales"
+    t.integer  "quantity"
+    t.decimal  "price"
+    t.string   "currency"
+    t.integer  "max_tix"
+    t.integer  "venue_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["start_time"], :name => "index_events_on_start_time"
+  add_index "events", ["user_id"], :name => "index_events_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
