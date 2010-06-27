@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.47pre4 r22446"
-   sodipodi:docname="logo.svg">
+   sodipodi:docname="logo.png">
   <defs
      id="defs4">
     <linearGradient
@@ -25,7 +25,7 @@
          offset="0"
          id="stop3603" />
       <stop
-         style="stop-color:#00ff00;stop-opacity:0.70588237;"
+         style="stop-color:#41a317;stop-opacity:1;"
          offset="1"
          id="stop3605" />
     </linearGradient>
@@ -45,16 +45,23 @@
        x2="393.26166"
        y2="459.93417"
        gradientUnits="userSpaceOnUse" />
+    <inkscape:perspective
+       id="perspective3938"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#151b8d"
+     pagecolor="#000000"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="4"
-     inkscape:cx="136.6337"
+     inkscape:cx="134.5087"
      inkscape:cy="37.087189"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -65,7 +72,8 @@
      inkscape:window-height="976"
      inkscape:window-x="0"
      inkscape:window-y="25"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     borderlayer="false" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -79,10 +87,24 @@
     </rdf:RDF>
   </metadata>
   <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer"
+     style="display:inline">
+    <rect
+       style="fill:#2b547e;fill-opacity:1"
+       id="rect3870"
+       width="256.75"
+       height="46.5"
+       x="-0.75"
+       y="-0.64400101" />
+  </g>
+  <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-138.73829,-437.50618)">
+     transform="translate(-138.73829,-437.50618)"
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;fill:url(#linearGradient3718);fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
