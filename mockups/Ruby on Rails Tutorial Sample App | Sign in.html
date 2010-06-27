@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  <title>Ruby on Rails Tutorial Sample App | Sign in</title>
+
+  
+  
+  <link href="/home/brian/rails_projects/sample_app/mockups/stylesheets/blueprint/screen.css" media="screen" rel="stylesheet" type="text/css">
+
+  
+  <link href="/home/brian/rails_projects/sample_app/mockups/stylesheets/blueprint/print.css?1274218122" media="print" rel="stylesheet" type="text/css">
+
+<!--[if lt IE 8]><link href="/home/brian/rails_projects/sample_app/mockups/stylesheets/blueprint/ie.css?1274218122" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+  
+  <link href="/home/brian/rails_projects/sample_app/mockups/stylesheets/custom.css" media="screen" rel="stylesheet" type="text/css">
+
+</head><body>
+<div class="container">
+<div id="header" class="round"><a href="/"><img alt="TixMix" class="round" src="/home/brian/rails_projects/sample_app/mockups/images/logo.png?1274223643"></a>
+<div class="navigation round">
+<div class="navigation_item"> <a href="#">Tickets</a> </div>
+<div class="navigation_item"> <a href="#">Events</a> </div>
+<div class="navigation_item"> <a href="#">Venues</a> </div>
+<div class="navigation_item"> <a href="#">Account</a> </div>
+<div class="navigation_item"> <a href="/help">Help</a> </div>
+<div class="navigation_item"> <a href="/signin">Sign In</a> </div>
+</div>
+<div id="content" class="round">
+<div class="flash error">Invalid email/password combination.</div>
+<h2>Sign in</h2>
+<form action="/sessions" method="post">
+  <div style="margin: 0pt; padding: 0pt; display: inline;"><input name="authenticity_token" value="YTmLqilgNJud6G4crHr/pqBquMH8qx5IHBgt08GJ1js=" type="hidden"></div>
+  <div class="field"> <label for="session_email">Email</label><br>
+  <input id="session_email" name="session[email]" size="30" type="text">
+  </div>
+  <div class="field"> <label for="session_password">Password</label><br>
+  <input id="session_password" name="session[password]" size="30" type="password"> </div>
+  <div class="actions"> <input id="session_submit" name="commit" value="Sign in" type="submit"> </div>
+</form>
+<p>New user? <a href="/signup">Sign up now!</a></p>
+</div>
+<div id="footer">
+<div class="navigation round">
+<div class="navigation_item"> <a href="#">About Us</a> </div>
+<div class="navigation_item"> <a href="#">Contact</a> </div>
+<div class="navigation_item"> <a href="#">Blog</a> </div>
+<div class="navigation_item"> <a href="#">API</a> </div>
+<div class="navigation_item"> <a href="#">Help</a> </div>
+<div class="navigation_item"> <a href="#">Terms</a> </div>
+<div class="navigation_item"> <a href="#">Privacy</a> </div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
