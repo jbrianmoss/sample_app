@@ -1,2 +1,45 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<h2>Sell out an Event</h2>
+
+<% form_for([:user, @event]) do |f| %>
+  <%= f.error_messages %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.datetime_select :end_time %>
+  </div>  
+  <div class="field">
+    <%= f.label :stop_sales %><br />
+    <%= f.datetime_select :stop_sales %>
+  </div>
+    <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :currency %><br />
+    <%= f.text_field :currency %>
+  </div>
+  <div class="field">
+    <%= f.label :max_tickets %><br />
+    <%= f.text_field :max_tix %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Add Event" %>
+  </div>
+<% end %>
+

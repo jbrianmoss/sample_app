@@ -1,0 +1,11 @@
+<h2>Events</h2>
+
+<%= link_to "Add an Event", new_user_event_path %>
+
+<%= will_paginate %>
+
+<ul class="events">
+  <%= render @events %>
+</ul>
+
+<%= will_paginate %>
