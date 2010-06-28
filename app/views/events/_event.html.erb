@@ -1,4 +1,5 @@
 <li>
   <%= event.name %>
   <%= event.description %>
+  | <%= link_to "delete", user_event_path(:id => event.id), :method => :delete, :confirm => "You sure?" %>
 </li>

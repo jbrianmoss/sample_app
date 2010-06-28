@@ -24,6 +24,13 @@ class EventsController < ApplicationController
     @events = Event.paginate(:page => params[:page])
   end
   
+  def destroy
+    Event.find(params[:id]).destroy
+    flash[:success] = "Event destroyed."
+    redirect_to user_events_path
+  end
+  
+  
   private
 
 /
